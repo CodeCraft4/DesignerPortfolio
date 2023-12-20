@@ -1,0 +1,112 @@
+:root {
+  --up: 3;
+  --cardWidth: calc(170vw / var(--up));
+  /* Width of each card */
+  --carouselWidth: calc(var(--cardWidth) * var(--num));
+  /* Width of the entire carousel */
+  --carouselLeftMargin: calc(3vw - var(--cardWidth));
+
+  /* Media query for small screens (e.g., mobile) */
+  @media screen and (max-width: 900px) {
+    --up: 1;
+    /* Adjust the number of visible cards for small screens */
+  }
+}
+
+/* Styles for the carousel container */
+.carouselwrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Styles for the carousel itself */
+.carousel {
+  width: var(--carouselWidth);
+  margin: 0 0 0 var(--carouselLeftMargin);
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0;
+
+  /* Styles for animation when shifting to the previous card */
+  &.prev {
+    animation-duration: 0.6s;
+    animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+    animation-name: prev;
+  }
+
+  /* Styles for animation when shifting to the next card */
+  &.next {
+    animation-duration: 0.6s;
+    animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+    animation-name: next;
+  }
+}
+
+/* Keyframes for the animation when shifting to the next card */
+@keyframes next {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(calc(0px + 32vw));
+  }
+}
+
+/* Keyframes for the animation when shifting to the previous card */
+@keyframes prev {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(calc(0px - 32vw));
+  }
+}
+
+
+@media screen and (max-width:330px) {
+  @keyframes next {
+    from {
+      transform: translateX(0px);
+    }
+  
+    to {
+      transform: translateX(calc(0px + 86vw));
+    }
+  }
+  
+  /* Keyframes for the animation when shifting to the previous card */
+  @keyframes prev {
+    from {
+      transform: translateX(0px);
+    }
+  
+    to {
+      transform: translateX(calc(0px - 86vw));
+    }
+  }
+}
+@media screen and (min-width:330px) {
+  @keyframes next {
+    from {
+      transform: translateX(0px);
+    }
+  
+    to {
+      transform: translateX(calc(0px + 38.8vw));
+    }
+  }
+  
+  /* Keyframes for the animation when shifting to the previous card */
+  @keyframes prev {
+    from {
+      transform: translateX(0px);
+    }
+  
+    to {
+      transform: translateX(calc(0px - 38.8vw));
+    }
+  }
+}
