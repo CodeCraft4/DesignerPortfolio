@@ -26,7 +26,7 @@ const Contact = () => {
             Get In Touch
           </Typography>
           <Grid container spacing={5} mt={8}>
-            <Grid item md={6} sm={6}>
+            <Grid item md={6} sm={12} xs={12}>
               <Typography p={2} fontSize={{md:"1.4em",sm:"1.4em",xs:'1em'}}>
                 Get In Touch
               </Typography>
@@ -71,7 +71,7 @@ const Contact = () => {
                 </Button>
               </form>
             </Grid>
-            <Grid item md={6} mt={4} sm={6}>
+            <Grid item md={6} mt={4} sm={12} xs={12}>
               <Typography p={4} fontFamily={"cursive"} fontSize={{md:"1.6em",sm:'1.2em',xs:'1.2em'}} color={'white'}>
                 My Contact Details
               </Typography>
