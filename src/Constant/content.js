@@ -18,7 +18,7 @@ export const ABOUT_DATA = [
       "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600",
     education: "DATA Entry",
     description:
-      "In Excel, enter data by selecting a cell, typing the information, and pressing Enter.",
+      "Data Entry professionals are responsible for accurately inputting and managing data in databases.",
   },
   {
     imgUrl:

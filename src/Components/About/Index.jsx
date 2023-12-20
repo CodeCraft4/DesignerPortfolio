@@ -17,7 +17,7 @@ const About = () => {
         >
           ABOUT US
         </Typography>
-        <Grid container spacing={3}>
+        <Grid container spacing={2}>
           {ABOUT_DATA.map((item) => (
             <Grid item md={4} sm={6} xs={12}>
               <Box

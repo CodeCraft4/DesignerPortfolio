@@ -2,7 +2,6 @@ import React from "react";
 import {
   Box,
   Button,
-  Container,
   Grid,
   Input,
   InputLabel,
@@ -21,11 +20,10 @@ const Contact = () => {
   return (
     <div id="contact">
       <Box bgcolor={"#212121"} color={"gray"} p={9} mt={10}>
-        <Container maxWidth={"lg"}>
           <Typography fontWeight={900} fontSize={{md:"3em",sm:"3em",xs:'1.2em'}} textAlign={"center"} color={'white'}>
             Get In Touch
           </Typography>
-          <Grid container spacing={5} mt={8}>
+          <Grid container spacing={8} mt={8}>
             <Grid item md={6} sm={12} xs={12}>
               <Typography p={2} fontSize={{md:"1.4em",sm:"1.4em",xs:'1em'}}>
                 Get In Touch
@@ -100,7 +98,6 @@ const Contact = () => {
               </Typography>
             </Grid>
           </Grid>
-        </Container>
 
         <Box display={'flex'} justifyContent={'center'} mt={8}>
           <Link href={"#"}>

@@ -27,7 +27,7 @@ const Blogs = () => {
           sx={{
             width: "100%",
             position: "absolute",
-            top: "20%",
+            top:{md:'20%',sm:'20%',xs:'3%'},
             textAlign: "center",
           }}
         >
@@ -48,40 +48,61 @@ const Blogs = () => {
               sx={{
                 color: "white",
                 letterSpacing: { md: 1, sm: 0, xs: 0 },
+                fontSize:{md:16,sm:16,xs:12},
                 fontFamily: {
                   md: "cursive",
                   sm: "sans-serif",
                   xs: "sans-serif",
                 },
                 wordSpacing: { md: 3, sm: 1, xs: 0 },
-                display: { md: "flex", sm: "flex", xs: "none" },
+                display: { md: "flex", sm: "flex", xs: "block" },
               }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-              porro, mollitia, libero molestias doloribus ut cum voluptas
-              eligendi laboriosam eius iste? Perspiciatis ut a odio libero
-              corporis sed dignissimos rerum dolorum earum inventore voluptate
-              neque ab maxime facere laboriosam consequatur animi obcaecati sunt
-              accusantium voluptatibus aliquid totam, nemo vitae! Reprehenderit,
-              fugit adipisci? Tempore natus tempora ipsam, aperiam dolorem porro
-              ducimus incidunt laudantium numquam cum atque nostrum eius
-              laboriosam aliquam consectetur dignissimos sint quasi laborum
-              deserunt pariatur, commodi minus. Dolores natus voluptatem soluta
-              atque excepturi, explicabo saepe corrupti ipsam debitis repellat
-              culpa expedita nulla delectus architecto eaque facilis a cumque
-              recusandae enim! Blanditiis maxime, dolore consequatur officiis
-              facilis suscipit dolores reprehenderit dignissimos quos molestias
-              porro molestiae repellendus. Labore, possimus asperiores vel
-              debitis eius odit inventore voluptate porro eos pariatur culpa
-              voluptatibus facilis, accusamus optio voluptatem, hic unde
-              temporibus expedita ea id laborum vitae adipisci obcaecati?
-              Ratione numquam atque, consequuntur dolores dignissimos sapiente
-              hic quae, ut nostrum dolorum sed molestiae vel eum quod quisquam
-              praesentium natus nesciunt nemo eius voluptates dicta veniam
-              officia modi. Accusamus, laborum alias non omnis obcaecati, vero
-              saepe voluptatum labore dolores quidem ullam magnam vel adipisci
-              voluptate illo qui nihil recusandae praesentium tempora reiciendis
-              nisi expedita consectetur excepturi.
+              Graphic designer blogs serve as valuable resources for both
+              professionals and enthusiasts, offering insights, trends, and
+              creative inspiration. These blogs showcase the latest design
+              projects, share industry knowledge, and provide tutorials to
+              enhance skills. For instance, the Coursera article explores the
+              roles and skills of a graphic designer, guiding aspiring designers
+              on their journey. Meanwhile, the blogonyourown.com list of the "23
+              Best Graphic Design Blogs" is a treasure trove for staying updated
+              on design trends and finding direction in the dynamic world of
+              graphic design. Additionally, blogs like designwizard.com
+              highlight the work of famous graphic designers, offering a glimpse
+              into their creativity and impact on the industry.
+            </Typography>
+            <Typography
+              sx={{
+                color: "white",
+                letterSpacing: { md: 1, sm: 0, xs: 0 },
+                pt:{md:2,sm:2,xs:0},
+                fontSize:{md:16,sm:16,xs:12},
+                fontFamily: {
+                  md: "cursive",
+                  sm: "sans-serif",
+                  xs: "sans-serif",
+                },
+                wordSpacing: { md: 3, sm: 1, xs: 0 },
+                display: { md: "flex", sm: "flex", xs: "block" },
+              }}
+            >
+              UI Designer Blogs: A Wealth of Knowledge and Inspiration.
+              UI designer blogs offer a plethora of insights, tips, and
+              resources for both beginners and seasoned professionals. The
+              "Learn UI Design" blog provides a comprehensive list of "100
+              Things a UX/UI Designer Should Know," covering a broad spectrum of
+              topics essential for designers to master their craft[1]. The UX
+              Design Institute's blog features a valuable "UI Glossary" with 100
+              terms, creating a language resource to enhance designers'
+              understanding and communication skills[2]. CareerFoundry's blog
+              explains the roles and responsibilities of UI designers, offering
+              a guide to the dynamic and varied nature of the profession[3]. For
+              those seeking reading recommendations, Medium's list of "Ultimate
+              UX, UI Design Books & Blogs" compiled by Christine Vallaure
+              includes essential resources for staying updated in the field[4].
+              Aspiring designers can also explore the differences between UX and
+              UI design in CareerFoundry's guide, providing clarity on these
+              distinct but interconnected disciplines[5].
             </Typography>
           </Container>
         </Box>

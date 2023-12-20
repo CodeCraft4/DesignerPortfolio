@@ -9,7 +9,7 @@ export const CardSlider = ({ img, Title, person, description }) => (
   <div>
     <Box
       mt={6}
-      width={{ md: 510, xs: 246, sm: 450 }}
+      width={{ md: 510, xs: 296, sm: 450 }}
       boxShadow={"2px 15px 40px gray"}
       p={3}
       borderRadius={3}
