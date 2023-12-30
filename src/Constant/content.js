@@ -92,7 +92,7 @@ export const TESTIMONIALS = [
     
     Title: "LOGO Designer",
     description:
-    "A logo maker is a tool or software that enables users to create custom logos for businesses or personal use.",
+    "A logo maker is a tool or software that enables users to create custom logos for businesses or personal use.some things like a demo Logo and create a new Logo.",
     imgUrl:
     "https://images.pexels.com/photos/19444120/pexels-photo-19444120/free-photo-of-chrome-mustang-logo-on-the-trunk-lid-under-the-brake-light.jpeg?auto=compress&cs=tinysrgb&w=600",
     person: "Logo Designer",
