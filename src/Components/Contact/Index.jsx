@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Grid,
-  Input,
-  InputLabel,
-  Link,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Grid, Input, Link, Typography } from "@mui/material";
 import {
   Facebook,
   Instagram,
@@ -14,8 +6,45 @@ import {
   Pinterest,
   Twitter,
 } from "@mui/icons-material";
+import { useState } from "react";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../Firestore/firestore";
 
 const Contact = () => {
+  // Usestate hook for input field
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [message, setMessage] = useState("");
+
+  // Refrence for input Form to store data in Firestore
+  const userRefrence = collection(db, "ContactForm");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (name && email && number && message) {
+      await addDoc(userRefrence, {
+        name: name,
+        email: email,
+        number: number,
+        message: message,
+      });
+      alert("Data has been Store in fireBase");
+    } else {
+      if (name && email && number && message) {
+        setName("");
+        setEmail("");
+        setName("");
+        setMessage("");
+      }
+      document.getElementById("name").innerHTML = "Please fill your Name";
+      document.getElementById("email").innerHTML =
+        "Please fill Email example@example.com";
+      document.getElementById("number").innerHTML =
+        "Please fill your Phone Number";
+    }
+  };
+
   return (
     <div id="contact">
       <Box bgcolor={"#212121"} color={"gray"} p={9} mt={10}>
@@ -35,46 +64,75 @@ const Contact = () => {
             >
               Get In Touch
             </Typography>
-            <form>
-              <InputLabel Htmlfor={"text"}></InputLabel>
+            <form onSubmit={handleSubmit}>
               <Input
-                placeholder="Your Name"
+                placeholder="Enter your Name"
                 type="text"
-                id="text"
-                name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 sx={{ bgcolor: "#9e9e9e", p: 1, borderRadius: 1, m: 1 }}
                 fullWidth
               />
-              <InputLabel Htmlfor={"email"}></InputLabel>
+              <span
+                style={{
+                  color: "orange",
+                  fontSize: 14,
+                  marginLeft: 10,
+                  fontStyle: "italic",
+                  fontWeight: "lighter",
+                }}
+                id="name"
+              ></span>
               <Input
-                placeholder="Your Email"
-                name="email"
+                placeholder="Enter your Email"
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                sx={{ bgcolor: "#9e9e9e", p: 1, borderRadius: 1, m: 1 }}
+                fullWidth
+              />
+              <span
+                style={{
+                  color: "orange",
+                  fontSize: 14,
+                  marginLeft: 10,
+                  fontStyle: "italic",
+                  fontWeight: "lighter",
+                }}
                 id="email"
-                sx={{ bgcolor: "#9e9e9e", p: 1, borderRadius: 1, m: 1 }}
-                fullWidth
-              />
-              <InputLabel Htmlfor={"number"}></InputLabel>
+              ></span>
               <Input
-                placeholder="Your number"
+                placeholder="Enter your Phone Number"
                 type="number"
-                name="number"
-                id="number"
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
                 sx={{ bgcolor: "#9e9e9e", p: 1, borderRadius: 1, m: 1 }}
                 fullWidth
               />
+              <span
+                style={{
+                  color: "orange",
+                  fontSize: 14,
+                  marginLeft: 10,
+                  fontStyle: "italic",
+                  fontWeight: "lighter",
+                }}
+                id="number"
+              ></span>
               <Input
                 multiline
-                name="message"
                 rows={9}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 placeholder="Your Message"
-                sx={{ bgcolor: "#9e9e9e", m: 1, borderRadius: 1 }}
+                sx={{ bgcolor: "#9e9e9e", borderRadius: 1, m: 1 }}
                 fullWidth
               />
               <Button
                 variant="contained"
                 color="warning"
-                sx={{ borderRadius: "30px", p: 2, mt: 2 }}
+                type="submit"
+                sx={{ borderRadius: ",m:130px", p: 2, mt: 2 }}
               >
                 SEND MESSAGE
               </Button>

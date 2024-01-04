@@ -1,9 +1,7 @@
 import React from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { ABOUT_DATA } from "Constant/content";
-import {
-  ArrowRightAltOutlined,
-} from "@mui/icons-material";
+import { ArrowRightAltOutlined } from "@mui/icons-material";
 
 const About = () => {
   return (
@@ -18,14 +16,14 @@ const About = () => {
           ABOUT US
         </Typography>
         <Grid container spacing={2}>
-          {ABOUT_DATA.map((item) => (
-            <Grid item md={4} sm={6} xs={12}>
+          {ABOUT_DATA.map((item, index) => (
+            <Grid item md={4} sm={6} xs={12} key={index}>
               <Box
                 p={2}
                 bgcolor={"black"}
                 borderRadius={"40px 6px"}
                 sx={{
-                  outline:'1px solid gray',
+                  outline: "1px solid gray",
                   "&:hover": {
                     mt: "-5px",
                     transition: "all ease-in .2s",
@@ -48,10 +46,12 @@ const About = () => {
                   p={2}
                   color={"white"}
                   display={"flex"}
-                  sx={{"&:hover":{
-                    mx:1,
-                    transition:'.5s'
-                  }}}
+                  sx={{
+                    "&:hover": {
+                      mx: 1,
+                      transition: ".5s",
+                    },
+                  }}
                 >
                   <ArrowRightAltOutlined />
                   <span
