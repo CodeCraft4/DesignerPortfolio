@@ -1,10 +1,11 @@
 import { Box, Button, Grid, Input, Link, Typography } from "@mui/material";
 import {
+  Email,
   Facebook,
   Instagram,
-  LinkedIn,
+  LocationOn,
+  Phone,
   Pinterest,
-  Twitter,
 } from "@mui/icons-material";
 import { useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
@@ -148,43 +149,44 @@ const Contact = () => {
               My Contact Details
             </Typography>
             <Typography
-              color={"#ff7043"}
+              color={"Aqua"}
               fontSize={{ md: "1.2em", sm: "1em", xs: "1em" }}
               p={2}
             >
-              Email: <br /> <Link href={"#"}>zwandurdan@gmail.com</Link>
+              <Email /> <br /> <Link href={"#"}>zwandurdan@gmail.com</Link>
             </Typography>
             <Typography
-              color={"#ff7043"}
+              color={"aqua"}
               fontSize={{ md: "1.2em", sm: "1em", xs: "1em" }}
               p={2}
             >
-              Phone: <br />{" "}
+              <Phone />
+              <br />
               <span style={{ color: "gray", marginLeft: "10%" }}>
-                +923473912327
+                +92 347 3912 327
               </span>
             </Typography>
             <Typography
-              color={"#ff7043"}
+              color={"aqua"}
+              display={"flex"}
               fontSize={{ md: "1.2em", sm: "1em", xs: "1em" }}
               p={2}
             >
-              Adress: <br />
-              <span style={{ color: "gray", marginLeft: "10%" }}>
-                :Bara Durushkhela
-              </span>
-              <br />
-              <span style={{ color: "gray", marginLeft: "10%" }}>:Swat</span>
+              <LocationOn fontSize="large" />
               <br />
               <span style={{ color: "gray", marginLeft: "10%" }}>
-                :Pakistan
+                Durushkhela, <br />
+                Tahsil: Matta,District:Swat
               </span>
             </Typography>
           </Grid>
         </Grid>
 
         <Box display={"flex"} justifyContent={"center"} mt={8}>
-          <Link href={"#"}>
+          <Link
+            href={"https://www.facebook.com/ITXwaSImDuRdAn"}
+            target="_blank"
+          >
             <Facebook
               sx={{
                 p: 1,
@@ -196,19 +198,10 @@ const Contact = () => {
               fontSize="large"
             />
           </Link>
-          <Link href={"#"}>
-            <Twitter
-              sx={{
-                p: 1,
-                bgcolor: "#6a1b9a",
-                m: 1,
-                borderRadius: "50%",
-                color: "white",
-              }}
-              fontSize="large"
-            />
-          </Link>
-          <Link href={"#"}>
+          <Link
+            href={"https://www.instagram.com/its_wasim_durdan"}
+            target="_blank"
+          >
             <Instagram
               sx={{
                 p: 1,
@@ -220,19 +213,7 @@ const Contact = () => {
               fontSize="large"
             />
           </Link>
-          <Link href={"#"}>
-            <LinkedIn
-              sx={{
-                p: 1,
-                bgcolor: "#6a1b9a",
-                m: 1,
-                borderRadius: "50%",
-                color: "white",
-              }}
-              fontSize="large"
-            />
-          </Link>
-          <Link href={"#"}>
+          <Link href={"https://www.pinterest.com/zwandurdan"} target="_blank">
             <Pinterest
               sx={{
                 p: 1,

@@ -27,7 +27,7 @@ const Blogs = () => {
           sx={{
             width: "100%",
             position: "absolute",
-            top:{md:'20%',sm:'20%',xs:'3%'},
+            top: { md: "20%", sm: "20%", xs: "3%" },
             textAlign: "center",
           }}
         >
@@ -46,9 +46,9 @@ const Blogs = () => {
             </Typography>
             <Typography
               sx={{
-                color: "white",
+                color: "orange",
                 letterSpacing: { md: 1, sm: 0, xs: 0 },
-                fontSize:{md:16,sm:16,xs:12},
+                fontSize: { md: 30, sm: 26, xs: 20 },
                 fontFamily: {
                   md: "cursive",
                   sm: "sans-serif",
@@ -58,25 +58,14 @@ const Blogs = () => {
                 display: { md: "flex", sm: "flex", xs: "block" },
               }}
             >
-              Graphic designer blogs serve as valuable resources for both
-              professionals and enthusiasts, offering insights, trends, and
-              creative inspiration. These blogs showcase the latest design
-              projects, share industry knowledge, and provide tutorials to
-              enhance skills. For instance, the Coursera article explores the
-              roles and skills of a graphic designer, guiding aspiring designers
-              on their journey. Meanwhile, the blogonyourown.com list of the "23
-              Best Graphic Design Blogs" is a treasure trove for staying updated
-              on design trends and finding direction in the dynamic world of
-              graphic design. Additionally, blogs like designwizard.com
-              highlight the work of famous graphic designers, offering a glimpse
-              into their creativity and impact on the industry.
+              I have a lot of Skills.
             </Typography>
             <Typography
               sx={{
                 color: "white",
                 letterSpacing: { md: 1, sm: 0, xs: 0 },
-                pt:{md:2,sm:2,xs:0},
-                fontSize:{md:16,sm:16,xs:12},
+                pt: { md: 2, sm: 2, xs: 0 },
+                fontSize: { md: 16, sm: 16, xs: 12 },
                 fontFamily: {
                   md: "cursive",
                   sm: "sans-serif",
@@ -86,23 +75,23 @@ const Blogs = () => {
                 display: { md: "flex", sm: "flex", xs: "block" },
               }}
             >
-              UI Designer Blogs: A Wealth of Knowledge and Inspiration.
-              UI designer blogs offer a plethora of insights, tips, and
-              resources for both beginners and seasoned professionals. The
-              "Learn UI Design" blog provides a comprehensive list of "100
-              Things a UX/UI Designer Should Know," covering a broad spectrum of
-              topics essential for designers to master their craft[1]. The UX
-              Design Institute's blog features a valuable "UI Glossary" with 100
-              terms, creating a language resource to enhance designers'
-              understanding and communication skills[2]. CareerFoundry's blog
-              explains the roles and responsibilities of UI designers, offering
-              a guide to the dynamic and varied nature of the profession[3]. For
-              those seeking reading recommendations, Medium's list of "Ultimate
-              UX, UI Design Books & Blogs" compiled by Christine Vallaure
-              includes essential resources for staying updated in the field[4].
-              Aspiring designers can also explore the differences between UX and
-              UI design in CareerFoundry's guide, providing clarity on these
-              distinct but interconnected disciplines[5].
+              Graphic Designer With a foundation of two years in graphic design,
+              my work reflects meticulous attention to detail and a robust
+              portfolio spanning a spectrum of creative projects. <br />{" "}
+              Microsoft Office Proficiency Excel at utilizing the Microsoft
+              Office Suite, particularly adept at harnessing the power of Word
+              for document processing and Excel for efficient project. <br />{" "}
+              Data Entry and Management Efficiently manage data using Microsoft
+              Word and Excel, ensuring seamless organization and accessibility .{" "}
+              <br />
+              Banner Posts Demonstrate prowess in creating visually captivating
+              banner posts, merging design aesthetics with effective
+              communication. <br /> Logo Making Bring over two decades of
+              experience to logo design, translating brand identities into
+              visually striking symbols of excellence. <br /> In essence, my
+              skills combine creativity, technical finesse, and organizational
+              acumen, making me a versatile professional ready to elevate any
+              project.
             </Typography>
           </Container>
         </Box>

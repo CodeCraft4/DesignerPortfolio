@@ -24,11 +24,6 @@ const About = () => {
                 borderRadius={"40px 6px"}
                 sx={{
                   outline: "1px solid gray",
-                  "&:hover": {
-                    mt: "-5px",
-                    transition: "all ease-in .2s",
-                    boxShadow: "4px 5px 10px gray",
-                  },
                 }}
               >
                 <img
@@ -44,21 +39,12 @@ const About = () => {
                 <Typography
                   textAlign={"start"}
                   p={2}
-                  color={"white"}
+                  color={"orange"}
                   display={"flex"}
-                  sx={{
-                    "&:hover": {
-                      mx: 1,
-                      transition: ".5s",
-                    },
-                  }}
+                fontWeight={900}
                 >
                   <ArrowRightAltOutlined />
-                  <span
-                    style={{ fontWeight: 800, color: "orange", marginLeft: 3 }}
-                  >
-                    {item.education}
-                  </span>
+                  {item.education}
                 </Typography>
                 <Typography fontStyle={"italic"} color={"gray"} p={1}>
                   {item.description}
