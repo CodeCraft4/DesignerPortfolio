@@ -1,4 +1,16 @@
-import { Box, Button, Grid, Input, Link, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  Input,
+  Link,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@mui/material";
 import {
   Email,
   Facebook,
@@ -7,8 +19,8 @@ import {
   Phone,
   Pinterest,
 } from "@mui/icons-material";
-import { useState } from "react";
-import { addDoc, collection } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { addDoc, collection, getDocs } from "firebase/firestore";
 import { db } from "../Firestore/firestore";
 
 const Contact = () => {
@@ -32,12 +44,6 @@ const Contact = () => {
       });
       alert("Data has been Store in fireBase");
     } else {
-      if (name && email && number && message) {
-        setName("");
-        setEmail("");
-        setName("");
-        setMessage("");
-      }
       document.getElementById("name").innerHTML = "Please fill your Name";
       document.getElementById("email").innerHTML =
         "Please fill Email example@example.com";
